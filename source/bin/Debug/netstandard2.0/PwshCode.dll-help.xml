@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems xmlns="http://msh" schema="maml">
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-PwshCode</command:name>
+<maml:description>
+<maml:para>Put anything in, and out you get gibberish? PwshCode? Who knows..</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>PwshCode</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Encrypt string or objects, to a funny an customizable format. Not very effecient, and output is quite bloated, so this is not for production use.. Idea for this came from a few esoteric languages.. At least, evildoers must have great skills, and too much time on their hand, to be able to crack this. For top security, specify the Secret parameter, and if very bloated, change prefix to none.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-PwshCode</maml:name>
+<command:parameter required="true" position="0" >
+<maml:name>InputObject</maml:name>
+<command:parameterValue required="true">PSObject</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="1" >
+<maml:name>Secret</maml:name>
+<command:parameterValue required="true">String</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="2" >
+<maml:name>Prefix</maml:name>
+<command:parameterValue required="true">String</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" pipelineInput="true (ByValue)" position="0" >
+<maml:name>InputObject</maml:name>
+<maml:description>
+<maml:para>One or more strings or objects. If too large/many objects, output could be hundrerds of megabyte or more, so be careful.</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="1" >
+<maml:name>Secret</maml:name>
+<maml:description>
+<maml:para>If specified, additionally encrypts (symmetric) the content with this passphrase</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="2" >
+<maml:name>Prefix</maml:name>
+<maml:description>
+<maml:para>Prefix the output with this word</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>System.String</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<maml:alertSet>
+<maml:alert>
+<maml:para>Q: What do you call a monkey who works in a call centre? A: A who-rang-utang!</maml:para>
+</maml:alert>
+</maml:alertSet>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code>&quot;This is a top secret message&quot; | Get-PwshCode</dev:code>
+<dev:remarks>
+<maml:para>Encode message, no encryption</maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+</command:example>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+<dev:code>&quot;This is a top secret message&quot; | Get-PwshCode -Secret &apos;Sshh!&apos; -Prefix None</dev:code>
+<dev:remarks>
+<maml:para>Encode and encrypt message. No prefix in output.</maml:para>
+</dev:remarks>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Undo-PwshCode</command:name>
+<maml:description>
+<maml:para>Put PwshCode in, and maybe you get something valuable out?</maml:para>
+</maml:description>
+<command:verb>Undo</command:verb>
+<command:noun>PwshCode</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Decrypt string or objects, from a funny an customizable format. Idea for this came from a few esoteric languages.. At least, evildoers must have great skills, and too much time on their hand, to be able to crack this. The secret and prefix must match what was specified when creating the PwshCode.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Undo-PwshCode</maml:name>
+<command:parameter required="true" position="0" >
+<maml:name>PwshCode</maml:name>
+<command:parameterValue required="true">String</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="1" >
+<maml:name>Secret</maml:name>
+<command:parameterValue required="true">String</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="2" >
+<maml:name>Prefix</maml:name>
+<command:parameterValue required="true">String</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" pipelineInput="true (ByValue)" position="0" >
+<maml:name>PwshCode</maml:name>
+<maml:description>
+<maml:para>Gibberish?..</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="1" >
+<maml:name>Secret</maml:name>
+<maml:description>
+<maml:para>If used when generating PwshCode, then it must laso be used when undoing it</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="2" >
+<maml:name>Prefix</maml:name>
+<maml:description>
+<maml:para>Specify the prefix that&apos;s found in the Gibberish</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>System.String</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<maml:alertSet>
+<maml:alert>
+<maml:para>Q: What do you call a monkey who works in a call centre? A: A who-rang-utang!</maml:para>
+</maml:alert>
+</maml:alertSet>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code>$PwshCode | Get-PwshCode</dev:code>
+<dev:remarks>
+<maml:para>Decode message, no encryption</maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+</command:example>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+<dev:code>$PwshCode | Get-PwshCode -Secret &apos;Sshh!&apos; -Prefix None</dev:code>
+<dev:remarks>
+<maml:para>Decode and decrypt message. No prefix in output.</maml:para>
+</dev:remarks>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+</helpItems>

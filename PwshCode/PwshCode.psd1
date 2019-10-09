@@ -30,7 +30,7 @@ CompanyName = 'Unknown'
 Copyright = '(c) Martin Norlunn. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Convert text/objects to fun and secure code using secretive methode! Be aware, the output is quite bloated, so not suited for large arrays of objects, but perfect for strings.'
+Description = 'Convert text/objects to fun and secure code using secretive method! Be aware, the output is quite bloated, so not suited for large arrays of objects, but perfect for strings.'
 
 # Minimum version of the PowerShell engine required by this module
 PowerShellVersion = '4.0'
@@ -95,13 +95,13 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        # Tags = @()
+        Tags = "PowerShell", "Pwsh", "encryption", "esoteric"
 
         # A URL to the license for this module.
-        # LicenseUri = ''
+        LicenseUri = 'https://github.com/Norlunn/PwshCode/blob/master/LICENSE'
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/Norlunn/PwshCode'
 
         # A URL to an icon representing this module.
         # IconUri = ''
@@ -113,7 +113,7 @@ PrivateData = @{
         # Prerelease = ''
 
         # Flag to indicate whether the module requires explicit user acceptance for install/update/save
-        RequireLicenseAcceptance = $true
+        RequireLicenseAcceptance = $false
 
         # External dependent modules of this module
         # ExternalModuleDependencies = @()

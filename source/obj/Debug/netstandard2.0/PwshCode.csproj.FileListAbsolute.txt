@@ -1,0 +1,8 @@
+D:\repos\priv\csharp\posh-cmdlets\PwshCode\bin\Debug\netstandard2.0\PwshCode.deps.json
+D:\repos\priv\csharp\posh-cmdlets\PwshCode\bin\Debug\netstandard2.0\PwshCode.dll
+D:\repos\priv\csharp\posh-cmdlets\PwshCode\bin\Debug\netstandard2.0\PwshCode.pdb
+D:\repos\priv\csharp\posh-cmdlets\PwshCode\obj\Debug\netstandard2.0\PwshCode.csprojAssemblyReference.cache
+D:\repos\priv\csharp\posh-cmdlets\PwshCode\obj\Debug\netstandard2.0\PwshCode.AssemblyInfoInputs.cache
+D:\repos\priv\csharp\posh-cmdlets\PwshCode\obj\Debug\netstandard2.0\PwshCode.AssemblyInfo.cs
+D:\repos\priv\csharp\posh-cmdlets\PwshCode\obj\Debug\netstandard2.0\PwshCode.dll
+D:\repos\priv\csharp\posh-cmdlets\PwshCode\obj\Debug\netstandard2.0\PwshCode.pdb
